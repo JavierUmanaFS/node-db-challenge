@@ -16,6 +16,16 @@ router.get("/", (req, res) =>{
   })
 })
 
+router.get("/tasks", (req, res) =>{
+  db.getTask()
+  .then(tasks =>{
+    res.status(200).json(tasks)
+  })
+  .catch(err => {
+    res.status(500).json({ errorMessage: err.message })
+  })
+})
+
 router.get("/:id", (req, res) =>{
   db.getProjectById(req.params.id)
   .then(project =>{
@@ -59,12 +69,6 @@ router.delete("/:id", (req, res) => {
   })
 })
 
-// router.get("/tasks/:id", (req, res) =>{
-//   db.getTask()
-//   .then(tasks =>{
-//     res.status(200).json(tasks)
-//   })
-//   .catch(err => console.log(err))
-// })
+
 
 module.exports = router;

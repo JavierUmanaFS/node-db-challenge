@@ -43,7 +43,9 @@ function getResourceById(id){
 function addResource(resource){
   return db("resource")
   .insert(resource)
-  .then(id => getResourceById(id[0]))
+  .then(id => {
+    return getResourceById(id[0]);
+  })
 }
 
 function delResource(id){
@@ -54,11 +56,10 @@ function getTask(){
   return db("task as t")
   .join("project as p", "t.project_id","=","p.id")
   .select("t.id", "t.description", "t.notes", "t.completed", "p.project_name");
+}
 // SELECT t.id, t.description, t.notes, p.project_name
 // FROM task AS t
 // JOIN project AS p ON t.project_id = p.id;
-}
-
 function getTaskById(id){
   return db("task").where({ id })
 }
