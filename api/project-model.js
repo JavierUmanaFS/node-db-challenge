@@ -67,5 +67,6 @@ function getTaskById(id){
 function addTask(task){
   return db("task")
   .insert(task)
-  .then(id => getTaskById(id[0]))
+  .then(id => { 
+    return getTaskById(id[0])})
 }
