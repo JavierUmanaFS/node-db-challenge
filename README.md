@@ -38,13 +38,18 @@ Commit your code regularly and use descriptive messages. This helps both you (in
 
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] Explain the difference between `Relational Databases` and `SQL`.
+- [X] Explain the difference between `Relational Databases` and `SQL`.
+Relation DB allows use to create tables of data and connect them through a foreign key that links them together.
+SQL is the language we use to query for things we are looking for in the DB.
 
-- [ ] Why do tables need a `primary key`?
+- [X] Why do tables need a `primary key`?
+It is an ID provide to keep track of certain items/things.
 
-- [ ] What is the name given to a table column that references the primary key on another table.
+- [X] What is the name given to a table column that references the primary key on another table.
+A foreign key.
 
-- [ ] What do we need in order to have a _many to many_ relationship between two tables.
+- [X] What do we need in order to have a _many to many_ relationship between two tables.
+A third table to connect the two main tables.
 
 ## Minimum Viable Product
 
@@ -52,7 +57,7 @@ Take the steps necessary to complete the project from scratch. Start by initiali
 
 Complete the following tasks:
 
-- [ ] Design the data model and use _knex migrations_ to create the database and tables needed to satisfy the following business rules:
+- [X] Design the data model and use _knex migrations_ to create the database and tables needed to satisfy the following business rules:
   - [ ] a `project` can have multiple `tasks`.
   - [ ] a `task` belongs to only one `project`.
   - [ ] a `project` can use multiple `resources`. Example of `resources` are: computer, conference room, microphone, delivery van.
